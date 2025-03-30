@@ -93,7 +93,7 @@
                 <td>${product.id}</td>
                 <td>${product.title}</td>
                 <td>${product.description}</td>
-                <td>${parseFloat(product.price).toFixed(3)} VND</td>
+                <td>${parseFloat(product.price).toLocaleString()} VND</td>
                 <td>${product.type}</td>
                 <td>${product.brain}</td>
                 <td>${product.manufacture}</td>
