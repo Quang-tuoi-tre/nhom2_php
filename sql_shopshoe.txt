@@ -1,0 +1,210 @@
+-- phpMyAdmin SQL Dump
+-- version 5.2.1
+-- https://www.phpmyadmin.net/
+--
+-- Máy chủ: 127.0.0.1
+-- Thời gian đã tạo: Th3 28, 2025 lúc 03:55 PM
+-- Phiên bản máy phục vụ: 10.4.32-MariaDB
+-- Phiên bản PHP: 8.0.30
+
+
+CREATE DATABASE shopshoe CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci;
+USE shopshoe;
+
+
+SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+START TRANSACTION;
+SET time_zone = "+00:00";
+
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!40101 SET NAMES utf8mb4 */;
+
+--
+-- Cơ sở dữ liệu: `shopshoe`
+--
+
+-- --------------------------------------------------------
+
+--
+-- Cấu trúc bảng cho bảng `account`
+--
+
+CREATE TABLE `account` (
+  `username` varchar(255) CHARACTER SET utf8 COLLATE utf8_bin NOT NULL,
+  `password` varchar(255) CHARACTER SET utf8 COLLATE utf8_bin NOT NULL,
+  `role` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Đang đổ dữ liệu cho bảng `account`
+--
+
+INSERT INTO `account` (`username`, `password`, `role`) VALUES
+('admin', 'admin', 1);
+
+-- --------------------------------------------------------
+
+--
+-- Cấu trúc bảng cho bảng `shoes`
+--
+
+CREATE TABLE `shoes` (
+  `id` varchar(20) NOT NULL,
+  `path_image` varchar(255) NOT NULL,
+  `title` varchar(255) NOT NULL,
+  `price` int(11) NOT NULL,
+  `type` varchar(255) NOT NULL,
+  `brain` varchar(255) NOT NULL,
+  `manufacture` varchar(255) NOT NULL,
+  `material` varchar(255) NOT NULL,
+  `description` text NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Đang đổ dữ liệu cho bảng `shoes`
+--
+
+INSERT INTO `shoes` (`id`, `path_image`, `title`, `price`, `type`, `brain`, `manufacture`, `material`, `description`) VALUES
+('67E6B6F77AE20', '/ShopShoe/public/images/67E6B6F77AE20.jpg', 'Converse Chuck Taylor All Star Festival Smoothie', 1104000, 'classic', 'Converse', 'Việt Nam', 'Textile', 'Thiết kế cổ cao cá tính giúp bảo vệ an toàn vùng mắt cá chân'),
+('67E6B6F77DCBB', '/ShopShoe/public/images/67E6B6F77DCBB.jpg', 'Converse Chuck Taylor All Star Festival Smoothie', 1751000, 'classic', 'Converse', 'Việt Nam', 'Textile', 'Thiết kế cổ cao cá tính giúp bảo vệ an toàn vùng mắt cá chân'),
+('67E6B6F7801D4', '/ShopShoe/public/images/67E6B6F7801D4.jpg', 'Converse Chuck Taylor All Star Festival Smoothie', 1042000, 'classic', 'Converse', 'Việt Nam', 'Textile', 'Thiết kế cổ cao cá tính giúp bảo vệ an toàn vùng mắt cá chân'),
+('67E6B6F7825BB', '/ShopShoe/public/images/67E6B6F7825BB.jpg', 'Converse Chuck Taylor All Star Festival Smoothie', 1455000, 'classic', 'Converse', 'Việt Nam', 'Textile', 'Thiết kế cổ cao cá tính giúp bảo vệ an toàn vùng mắt cá chân'),
+('67E6B6F784769', '/ShopShoe/public/images/67E6B6F784769.jpg', 'Converse Chuck Taylor All Star Festival Smoothie', 1804000, 'classic', 'Converse', 'Việt Nam', 'Textile', 'Thiết kế cổ cao cá tính giúp bảo vệ an toàn vùng mắt cá chân'),
+('67E6B6F786AAA', '/ShopShoe/public/images/67E6B6F786AAA.jpg', 'Converse Chuck Taylor All Star Festival Smoothie', 1274000, 'classic', 'Converse', 'Việt Nam', 'Textile', 'Thiết kế cổ cao cá tính giúp bảo vệ an toàn vùng mắt cá chân'),
+('67E6B6F788EE6', '/ShopShoe/public/images/67E6B6F788EE6.jpg', 'Converse Chuck Taylor All Star Festival Smoothie', 1833000, 'classic', 'Converse', 'Việt Nam', 'Textile', 'Thiết kế cổ cao cá tính giúp bảo vệ an toàn vùng mắt cá chân'),
+('67E6B6F78B26F', '/ShopShoe/public/images/67E6B6F78B26F.jpg', 'Converse Chuck Taylor All Star Festival Smoothie', 1119000, 'chuck_1970s', 'Converse', 'Việt Nam', 'Textile', 'Thiết kế cổ cao cá tính giúp bảo vệ an toàn vùng mắt cá chân'),
+('67E6B6F78D44A', '/ShopShoe/public/images/67E6B6F78D44A.jpg', 'Converse Chuck Taylor All Star Festival Smoothie', 1422000, 'chuck_1970s', 'Converse', 'Việt Nam', 'Textile', 'Thiết kế cổ cao cá tính giúp bảo vệ an toàn vùng mắt cá chân'),
+('67E6B6F78F781', '/ShopShoe/public/images/67E6B6F78F781.jpg', 'Converse Chuck Taylor All Star Festival Smoothie', 977000, 'chuck_1970s', 'Converse', 'Việt Nam', 'Textile', 'Thiết kế cổ cao cá tính giúp bảo vệ an toàn vùng mắt cá chân'),
+('67E6B6F7919D5', '/ShopShoe/public/images/67E6B6F7919D5.jpg', 'Converse Chuck Taylor All Star Festival Smoothie', 1345000, 'chuck_1970s', 'Converse', 'Việt Nam', 'Textile', 'Thiết kế cổ cao cá tính giúp bảo vệ an toàn vùng mắt cá chân'),
+('67E6B6F793C06', '/ShopShoe/public/images/67E6B6F793C06.jpg', 'Converse Chuck Taylor All Star Festival Smoothie', 1129000, 'chuck_1970s', 'Converse', 'Việt Nam', 'Textile', 'Thiết kế cổ cao cá tính giúp bảo vệ an toàn vùng mắt cá chân'),
+('67E6B6F795E6B', '/ShopShoe/public/images/67E6B6F795E6B.jpg', 'Converse Chuck Taylor All Star Festival Smoothie', 836000, 'chuck_2', 'Converse', 'Việt Nam', 'Textile', 'Thiết kế cổ cao cá tính giúp bảo vệ an toàn vùng mắt cá chân'),
+('67E6B6F7980B7', '/ShopShoe/public/images/67E6B6F7980B7.jpg', 'Converse Chuck Taylor All Star Festival Smoothie', 1642000, 'chuck_2', 'Converse', 'Việt Nam', 'Textile', 'Thiết kế cổ cao cá tính giúp bảo vệ an toàn vùng mắt cá chân'),
+('67E6B6F79A43A', '/ShopShoe/public/images/67E6B6F79A43A.jpg', 'Converse Chuck Taylor All Star Festival Smoothie', 1596000, 'chuck_2', 'Converse', 'Việt Nam', 'Textile', 'Thiết kế cổ cao cá tính giúp bảo vệ an toàn vùng mắt cá chân'),
+('67E6B6F79C64A', '/ShopShoe/public/images/67E6B6F79C64A.jpg', 'Converse Chuck Taylor All Star Festival Smoothie', 853000, 'chuck_2', 'Converse', 'Việt Nam', 'Textile', 'Thiết kế cổ cao cá tính giúp bảo vệ an toàn vùng mắt cá chân'),
+('67E6B6F79E931', '/ShopShoe/public/images/67E6B6F79E931.jpg', 'Converse Chuck Taylor All Star Festival Smoothie', 1653000, 'chuck_2', 'Converse', 'Việt Nam', 'Textile', 'Thiết kế cổ cao cá tính giúp bảo vệ an toàn vùng mắt cá chân'),
+('67E6B6F7A0AAB', '/ShopShoe/public/images/67E6B6F7A0AAB.jpg', 'Converse Chuck Taylor All Star Festival Smoothie', 1610000, 'chuck_2', 'Converse', 'Việt Nam', 'Textile', 'Thiết kế cổ cao cá tính giúp bảo vệ an toàn vùng mắt cá chân'),
+('67E6B6F7A2DF1', '/ShopShoe/public/images/67E6B6F7A2DF1.jpg', 'Converse Chuck Taylor All Star Festival Smoothie', 833000, 'seasonal', 'Converse', 'Việt Nam', 'Textile', 'Thiết kế cổ cao cá tính giúp bảo vệ an toàn vùng mắt cá chân'),
+('67E6B6F7A4F44', '/ShopShoe/public/images/67E6B6F7A4F44.jpg', 'Converse Chuck Taylor All Star Festival Smoothie', 1998000, 'seasonal', 'Converse', 'Việt Nam', 'Textile', 'Thiết kế cổ cao cá tính giúp bảo vệ an toàn vùng mắt cá chân'),
+('67E6B6F7A6E8F', '/ShopShoe/public/images/67E6B6F7A6E8F.jpg', 'Converse Chuck Taylor All Star Festival Smoothie', 1777000, 'seasonal', 'Converse', 'Việt Nam', 'Textile', 'Thiết kế cổ cao cá tính giúp bảo vệ an toàn vùng mắt cá chân'),
+('67E6B6F7A911A', '/ShopShoe/public/images/67E6B6F7A911A.jpg', 'Converse Chuck Taylor All Star Festival Smoothie', 1832000, 'seasonal', 'Converse', 'Việt Nam', 'Textile', 'Thiết kế cổ cao cá tính giúp bảo vệ an toàn vùng mắt cá chân'),
+('67E6B6F7AB169', '/ShopShoe/public/images/67E6B6F7AB169.jpg', 'Converse Chuck Taylor All Star Festival Smoothie', 1018000, 'seasonal', 'Converse', 'Việt Nam', 'Textile', 'Thiết kế cổ cao cá tính giúp bảo vệ an toàn vùng mắt cá chân'),
+('67E6B6F7AD734', '/ShopShoe/public/images/67E6B6F7AD734.jpg', 'Converse Chuck Taylor All Star Festival Smoothie', 1418000, 'seasonal', 'Converse', 'Việt Nam', 'Textile', 'Thiết kế cổ cao cá tính giúp bảo vệ an toàn vùng mắt cá chân'),
+('67E6B6F7AE102', '/ShopShoe/public/images/67E6B6F7AE102.jpg', 'Converse Chuck Taylor All Star Festival Smoothie', 1852000, 'seasonal', 'Converse', 'Việt Nam', 'Textile', 'Thiết kế cổ cao cá tính giúp bảo vệ an toàn vùng mắt cá chân'),
+('67E6B6F7B03D9', '/ShopShoe/public/images/67E6B6F7B03D9.jpg', 'Converse Chuck Taylor All Star Festival Smoothie', 1913000, 'seasonal', 'Converse', 'Việt Nam', 'Textile', 'Thiết kế cổ cao cá tính giúp bảo vệ an toàn vùng mắt cá chân'),
+('67E6B6F7B2C89', '/ShopShoe/public/images/67E6B6F7B2C89.jpg', 'Converse Chuck Taylor All Star Festival Smoothie', 1383000, 'seasonal', 'Converse', 'Việt Nam', 'Textile', 'Thiết kế cổ cao cá tính giúp bảo vệ an toàn vùng mắt cá chân'),
+('67E6B6F7B58F5', '/ShopShoe/public/images/67E6B6F7B58F5.jpg', 'Converse Chuck Taylor All Star Festival Smoothie', 1136000, 'sneaker', 'Converse', 'Việt Nam', 'Textile', 'Thiết kế cổ cao cá tính giúp bảo vệ an toàn vùng mắt cá chân'),
+('67E6B6F7B84BF', '/ShopShoe/public/images/67E6B6F7B84BF.jpg', 'Converse Chuck Taylor All Star Festival Smoothie', 1214000, 'sneaker', 'Converse', 'Việt Nam', 'Textile', 'Thiết kế cổ cao cá tính giúp bảo vệ an toàn vùng mắt cá chân'),
+('67E6B6F7BBE10', '/ShopShoe/public/images/67E6B6F7BBE10.jpg', 'Converse Chuck Taylor All Star Festival Smoothie', 1596000, 'sneaker', 'Converse', 'Việt Nam', 'Textile', 'Thiết kế cổ cao cá tính giúp bảo vệ an toàn vùng mắt cá chân'),
+('67E6B6F7BEE41', '/ShopShoe/public/images/67E6B6F7BEE41.jpg', 'Converse Chuck Taylor All Star Festival Smoothie', 1620000, 'sneaker', 'Converse', 'Việt Nam', 'Textile', 'Thiết kế cổ cao cá tính giúp bảo vệ an toàn vùng mắt cá chân'),
+('67E6B6F7C2204', '/ShopShoe/public/images/67E6B6F7C2204.jpg', 'Converse Chuck Taylor All Star Festival Smoothie', 1428000, 'sneaker', 'Converse', 'Việt Nam', 'Textile', 'Thiết kế cổ cao cá tính giúp bảo vệ an toàn vùng mắt cá chân');
+
+-- --------------------------------------------------------
+
+--
+-- Cấu trúc bảng cho bảng `shop_card`
+--
+
+CREATE TABLE `shop_card` (
+  `username` varchar(255) CHARACTER SET utf8 COLLATE utf8_bin NOT NULL,
+  `shoe_id` varchar(255) NOT NULL,
+  `quantity` int(11) NOT NULL,
+  `time` datetime NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+-- --------------------------------------------------------
+
+--
+-- Cấu trúc bảng cho bảng `user`
+--
+
+CREATE TABLE `user` (
+  `first_name` varchar(255) NOT NULL,
+  `last_name` varchar(255) NOT NULL,
+  `username` varchar(255) CHARACTER SET utf8 COLLATE utf8_bin NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Đang đổ dữ liệu cho bảng `user`
+--
+
+INSERT INTO `user` (`first_name`, `last_name`, `username`) VALUES
+('Lê', 'Tiến Đạt', 'admin');
+
+-- --------------------------------------------------------
+
+--
+-- Cấu trúc bảng cho bảng `user_shoe_favorites`
+--
+
+CREATE TABLE `user_shoe_favorites` (
+  `username` varchar(255) CHARACTER SET utf8 COLLATE utf8_bin NOT NULL,
+  `shoe_id` varchar(255) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Chỉ mục cho các bảng đã đổ
+--
+
+--
+-- Chỉ mục cho bảng `account`
+--
+ALTER TABLE `account`
+  ADD PRIMARY KEY (`username`);
+
+--
+-- Chỉ mục cho bảng `shoes`
+--
+ALTER TABLE `shoes`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Chỉ mục cho bảng `shop_card`
+--
+ALTER TABLE `shop_card`
+  ADD PRIMARY KEY (`username`,`shoe_id`),
+  ADD KEY `shoe_id` (`shoe_id`);
+
+--
+-- Chỉ mục cho bảng `user`
+--
+ALTER TABLE `user`
+  ADD PRIMARY KEY (`username`);
+
+--
+-- Chỉ mục cho bảng `user_shoe_favorites`
+--
+ALTER TABLE `user_shoe_favorites`
+  ADD PRIMARY KEY (`username`,`shoe_id`),
+  ADD KEY `shoe_id` (`shoe_id`);
+
+--
+-- Các ràng buộc cho các bảng đã đổ
+--
+
+--
+-- Các ràng buộc cho bảng `shop_card`
+--
+ALTER TABLE `shop_card`
+  ADD CONSTRAINT `shop_card_ibfk_1` FOREIGN KEY (`username`) REFERENCES `user` (`username`) ON DELETE CASCADE ON UPDATE CASCADE,
+  ADD CONSTRAINT `shop_card_ibfk_2` FOREIGN KEY (`shoe_id`) REFERENCES `shoes` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
+
+--
+-- Các ràng buộc cho bảng `user`
+--
+ALTER TABLE `user`
+  ADD CONSTRAINT `user_ibfk_1` FOREIGN KEY (`username`) REFERENCES `account` (`username`) ON DELETE CASCADE ON UPDATE CASCADE;
+
+--
+-- Các ràng buộc cho bảng `user_shoe_favorites`
+--
+ALTER TABLE `user_shoe_favorites`
+  ADD CONSTRAINT `user_shoe_favorites_ibfk_1` FOREIGN KEY (`username`) REFERENCES `user` (`username`) ON DELETE CASCADE ON UPDATE CASCADE,
+  ADD CONSTRAINT `user_shoe_favorites_ibfk_2` FOREIGN KEY (`shoe_id`) REFERENCES `shoes` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
+COMMIT;
+
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
